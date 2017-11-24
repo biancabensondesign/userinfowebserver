@@ -1,0 +1,117 @@
+/*NAV BAR*/
+ul {
+  margin: 0 auto;
+  display: table;
+  padding: 5px;
+  background-color:red;
+  font-family: helvetica;
+  list-style: none;
+  line-height: 50px;
+  
+}
+
+li {
+  display: inline;
+  
+}
+
+li:hover {
+  background-color: red;
+}
+
+.suggest{
+  display: block;
+}
+
+div {
+  display: block;
+}
+
+a:hover {
+  color: white;
+  background-color:red;
+}
+
+a {
+  padding:15px;
+  color: red;
+  text-decoration: none;
+  background-color:white;
+  -webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+transition: all 0.5s ease;
+}
+
+/*NAVBAR OLD CSS
+#nav {
+	width: 100%;
+	float: left;
+	margin: 0 0 3em 0;
+	padding: 0;
+	list-style: none;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc; 
+	border-top: 1px solid #ccc; }
+#nav li {
+	float: left; }
+#nav li a {
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #069;
+	border-right: 1px solid #ccc; }
+#nav li a:hover {
+	color: #c00;
+	background-color: #fff; }*/
+
+/*CSS styles for standard search box*/
+#tfheader{
+      background-color:#efcec3;
+      }
+#tfnewsearch{
+      float:right;
+      padding:20px;
+      }
+.tftextinput{
+      margin: 0;
+      padding: 5px 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size:14px;
+      border:1px solid #a02b08; border-right:0px;
+      border-top-left-radius: 5px 5px;
+      border-bottom-left-radius: 5px 5px;
+      }
+.tfbutton {
+      margin: 0;
+      padding: 5px 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size:14px;
+      outline: none;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      color: #ffffff;
+      border: solid 1px #0076a3; border-right:0px;
+      background: #0095cd;
+      background: -webkit-gradient(linear, left top, left bottom, from(#ee2300), to(#a30d00));
+      background: -moz-linear-gradient(top,  #ee2300,  #a30d00);
+      border-top-right-radius: 5px 5px;
+      border-bottom-right-radius: 5px 5px;
+      }
+.tfbutton:hover {
+      text-decoration: none;
+      background: #007ead;
+      background: -webkit-gradient(linear, left top, left bottom, from(#ce1400), to(#00678e));
+      background: -moz-linear-gradient(top,  #ce1400,  #00678e);
+      }
+      /* Fixes submit button height problem in Firefox */
+.tfbutton::-moz-focus-inner {
+      border: 0;
+      }
+.tfclear{
+      clear:both;
+      }
+

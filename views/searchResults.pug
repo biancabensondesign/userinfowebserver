@@ -1,0 +1,29 @@
+doctype html
+html
+	head
+		meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')
+		link(rel='stylesheet' type='text/css' href='css/stylesheet.css')
+	body
+		ul#nav
+		li
+			a(href='/') Home
+		li
+			a(href='/new') Add new user
+		li
+			a(href='/users') Display all users
+		li
+			a(href='/search') Search
+			
+		if matchedUsers
+			p(id= matchedUsers) The result of your query is #{result.length}.
+			ul
+				each user in matchedUsers
+					li= user
+		else
+			p No matched users found
+
+script.
+//-     $(".button").onClick(functions() {
+//-     $.get('/searchResults'){}
+	
+//- })

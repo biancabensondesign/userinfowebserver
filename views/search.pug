@@ -1,0 +1,55 @@
+doctype html
+html
+	head
+		title Search Box Example 1
+		meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')
+		link(rel='stylesheet' type='text/css' href='css/stylesheet.css')
+	body
+			ul#nav
+			li
+			a(href='/') Home
+			li
+			a(href='/new') Add new user
+			li
+			a(href='/users') Display all users
+			li
+			a(href='/search') Search
+			#tfheader
+			form#tfnewsearch(method='post', action='/search')           
+				input#test.tftextinput(type='text', name='q', size='21', maxlength='120', autocomplete='off')
+				input.tfbutton(type='submit', value='search')
+			ul#dropdown
+			.tfclear
+				div.output
+						if matchedUser
+							p #{users.firstname} #{users.lastname}
+							p Email: #{users.email}
+			script(src='https://code.jquery.com/jquery-3.2.1.js')
+			script.
+				console.log("Start of AJAX component")
+					$(document).ready(()=>{
+					$('.tftextinput').on("keyup", () => {
+					var catchValue = $('#test').val();
+					//- console.log(catchValue);
+					$.get('/matchedUsers',{banana: catchValue}, function(data){
+					console.log("Server response: "+JSON.stringify(data));
+					var string = '';
+
+					for (var i = 0; i < data.matches.length; i++) {
+						//- console.log(data[i]);
+					string += `<li class="suggest", name="${data.matches[i]}"> ${data.matches[i].firstname} ${data.matches[i].lastname} </li>`
+				}
+				//- console.log(string)
+				$('#dropdown').html(`${string}`);
+				
+				$('.suggest').on('click', function () {
+					var click = $(this).attr('name');
+					$('#searchbar').val(`${click}`);
+					console.log(click);
+				})
+					});
+					})
+					
+				})				
+
+
