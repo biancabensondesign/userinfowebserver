@@ -39,5 +39,19 @@ html
 			})
 
 			});
+        script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    body
+        form(method='post', action='/new')
+            | First name: 
+            input#firstname(type='text', name='firstname')
+            br
+            | Last name: 
+            input#lastname(type='text', name='lastname')
+            br
+            | Email: 
+            input#email(type='email', name='email')
+            br
+            input#button(type='submit', value='submit')
+        script.
 
 
